@@ -15,7 +15,7 @@ for n in $(seq 3 $(cat rtfrance.xls | wc -l))
 #for n in `seq 3 3`
 do
 
-  echo '  <programme start="_DEBUT00 +0400" stop="_FIN00 +0400" channel="RTFrance.tv">
+  echo '  <programme start="_DEBUT00 +0300" stop="_FIN00 +0300" channel="RTFrance.tv">
     <title lang="fr">_TITRE</title>
     <desc lang="fr">_DESCRIPTION</desc>
     <category lang="fr">_CATEGORIE</category>
