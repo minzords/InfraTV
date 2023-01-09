@@ -22,8 +22,6 @@ do
     <icon src="https://i.f1g.fr/media/eidos/orig/2019/10/29/XVM5b3bd926-f975-11e9-ba50-e460b16f9313.jpg"/>
   </programme>' >> rtfrance.xml
 
-  #debut=$(awk -F '\t' '{print $1}' rtfrance.xls | sed -n 50p | sed -e "s|/||g")
-  #debut=$debut$(awk -F '\t' '{print $2}' rtfrance.xls | sed -n 50p | sed -e "s|:||g")
   debut=$(awk -F '\t' '{print $1}' rtfrance.xls | sed -n "$n"p | awk -F/ '{printf 20"%s%s%s\n",$3,$2,$1}')
   debut=$debut$(awk -F '\t' '{print $2}' rtfrance.xls | sed -n "$n"p | sed -e "s|:||g")
   sed -i "s|_DEBUT|$debut|g" rtfrance.xml
