@@ -1,0 +1,14 @@
+{
+    "name": "minzord/iptv",
+    "type": "project",
+    "require": {
+        "jaylinski/xmltv": "^4.0",
+        "phpoffice/phpspreadsheet": "^1.28"
+    },
+    "authors": [
+        {
+            "name": "Florian Blanchet",
+            "email": "contact@minzord.fr"
+        }
+    ]
+}
