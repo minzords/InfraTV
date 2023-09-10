@@ -30,7 +30,14 @@ for ($i = 2; $i < count($data); $i++) {
     $programme = new Tv\Programme('rt.fr', $debut, $fin);
     $programme->addTitle(new Tv\Elements\Title($data[$i][3], 'fr'));
     $programme->addDescription(new Tv\Elements\Desc(strval($data[$i][6]), 'fr'));
-    //$programme->addCategory(new Tv\Elements\Category(".", 'fr'));
+    $programme->addCountry(new Tv\Elements\Country('Russie', 'ru'));
+    $programme->language =  new Tv\Elements\Language('fr');
+
+    if ($data[$i][3] == "JOURNAL D'ACTUALITE") {
+        $programme->premiere = new Tv\Elements\Premiere('Inedit');
+        $programme->lastChance = new Tv\Elements\LastChance('Dernière diffusion');
+    }
+
     $programme->addIcon(new Tv\Elements\Icon('https://i.f1g.fr/media/eidos/orig/2019/10/29/XVM5b3bd926-f975-11e9-ba50-e460b16f9313.jpg'));
     $tv->addProgramme($programme);
 }
