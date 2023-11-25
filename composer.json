@@ -10,5 +10,13 @@
             "name": "Florian Blanchet",
             "email": "contact@minzord.fr"
         }
-    ]
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "patch -p0 -f < patch/dtd.patch"
+        ],
+        "post-update-cmd": [
+            "patch -p0 -f < patch/dtd.patch"
+        ]
+    }
 }

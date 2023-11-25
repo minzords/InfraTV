@@ -1,0 +1,11 @@
+--- vendor/jaylinski/xmltv/src/xmltv.dtd	2023-11-25 16:24:57.476554861 +0100
++++ vendor/jaylinski/xmltv/src/patch.dtd	2023-11-25 16:26:01.818397810 +0100
+@@ -71,7 +71,7 @@
+ <!ELEMENT length (#PCDATA)>
+ <!ATTLIST length units (seconds | minutes | hours) #REQUIRED>
+ 
+-<!ELEMENT icon EMPTY>
++<!ELEMENT icon ANY>
+ <!ATTLIST icon src         CDATA #REQUIRED
+                width       CDATA #IMPLIED
+                height      CDATA #IMPLIED>
